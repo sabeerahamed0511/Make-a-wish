@@ -7,7 +7,7 @@ export default function LandingPage() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (getToken()) return navigate(`events/${getCurrentUser().name}`);
+        if (getToken()) return navigate(`/events/${getCurrentUser().name}`);
     }, []);
 
     return <>

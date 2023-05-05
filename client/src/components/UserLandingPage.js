@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import NewEventForm from "./NewEventForm";
-import { deleteCurrentUser, deleteToken, getToken } from "../utils/storage-utills";
+import { deleteCurrentUser, deleteToken, getCurrentUser, getToken } from "../utils/storage-utills";
 
 export default function UserLandingPage() {
     const navigate = useNavigate();
@@ -9,7 +9,7 @@ export default function UserLandingPage() {
     const [showCreateForm, setShowCreateForm] = useState(false);
 
     useEffect(() => {
-        if (!getToken()) return navigate("../login");
+        if (!getToken()) return navigate("/login");
     }, []);
 
     return <>
@@ -28,7 +28,9 @@ export default function UserLandingPage() {
                             }}>
                                 <ion-icon name="add-circle"></ion-icon>
                             </li>
-                            <li>
+                            <li onClick={() => {
+                                navigate(`${getCurrentUser().name}`);
+                            }}>
                                 <ion-icon name="home"></ion-icon>
                             </li>
                             <li onClick={() => {

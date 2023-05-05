@@ -98,7 +98,7 @@ export default function WishForm({id, currPerson}) {
                                     }
                                 </form> :
                                 <div id="rocket">
-                                    <img src={require("../images/rocket.webp")} />
+                                   <span><img src={require("../images/rocket.webp")} /></span>
                                 </div>))
 
                     }

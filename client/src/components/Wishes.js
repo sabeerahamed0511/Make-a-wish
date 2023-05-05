@@ -37,14 +37,15 @@ export default function Wishes() {
 
     return <>
         {
-            currPerson &&
+            !currPerson ? 
+            <div className="waiting-loader-container"><div className="loader"></div></div> :
             (boo ?
                 <div className="my-wish">
                     <blockquote>
                         Hey {currPerson.name},
                         <p>
-                            {currPerson.notes}
-                            And I've received notes from your closest friends and family. I hope you enjoy it!
+                            {`${currPerson.notes} `} 
+                             And I've received notes from your closest friends and family. I hope you like it!
                         </p>
                         <div>
                             <button onClick={() => setBoo(false)}>Show!</button>
@@ -52,12 +53,12 @@ export default function Wishes() {
                     </blockquote>
                 </div> :
                 <div className="notes">
-                    <audio src={require("../images/Yen-Endral-Un-Piranthanal(PagalWorldl).mp3")} autoPlay onLoad={(e) => e.target.load()} />
+                    {/* <audio src={require("../images/Yen-Endral-Un-Piranthanal(PagalWorldl).mp3")} autoPlay onLoad={(e) => e.target.load()} /> */}
                     {list.map(({ _id, realName, nickNameOfWisher, nickNameOfReciever, message }) => {
                         return <div className="msg" key={_id}>
                             <p className="from">from {nickNameOfWisher} ;</p>
                             <section>
-                                <div>
+                                <div className="msg-container">
                                     <p className="to">hey {nickNameOfReciever},</p>
                                     <em>"{message}"</em>
                                     <p className="by">- {realName}</p>

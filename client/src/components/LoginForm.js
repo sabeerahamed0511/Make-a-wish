@@ -16,7 +16,7 @@ export default function LoginForm() {
     });
 
     useEffect(() => {
-        if (getToken()) return navigate(`events/${getCurrentUser().name}`);
+        if (getToken()) return navigate(`/events/${getCurrentUser().name}`);
     }, []);
 
     function onFormSubmit(e) {

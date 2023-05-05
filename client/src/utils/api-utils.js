@@ -1,5 +1,5 @@
-// const BASE_URL = "https://make-a-wish-node.onrender.com";
-export const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://make-a-wish-server.onrender.com";
+// export const BASE_URL = "http://localhost:5000";
 
 //TO ADD WISH
 export function addWish(data) {
@@ -12,14 +12,21 @@ export function addWish(data) {
         body : JSON.stringify(data)
     })
     .then(res => res.json())
-    .catch(() => alert("Error occured, Please fill the form again!"))
+    .catch((err) => alert(err.message))
 }
 
 //TO GET SINGLE PERSON WISHES
 export function getSinglePersonWishes(id) {
     return fetch(`${BASE_URL}/wish/${id}`)
     .then(res => res.json())
-    .catch(() => alert("Error occured, Please fill the form again!"))
+    .catch((err) => alert(err.message))
+}
+
+//TO DELETE SINGLE PERSON WISHE
+export function deleteSingleWish(id) {
+    return fetch(`${BASE_URL}/wish/${id}`, {method : "DELETE"})
+    .then(res => res.json())
+    .catch((err) => alert(err.message))
 }
 
 //TO ADD NEW PERSON
@@ -33,14 +40,14 @@ export function addNewPerson(data, id) {
         body : JSON.stringify(data)
     })
     .then(res => res.json())
-    .catch(() => alert("Error occured, Please fill the form again!"))
+    .catch((err) => alert(err.message))
 }
 
 //TO GET ALL PERSON
 export function getAllPerson(id) {
     return fetch(`${BASE_URL}/${id}`)
     .then(res => res.json())
-    .catch(() => alert("Error occured, Please fill the form again!"))
+    .catch((err) => alert(err.message))
 }
 
 
@@ -48,14 +55,14 @@ export function getAllPerson(id) {
 export function getSinglePerson(id) {
     return fetch(`${BASE_URL}/person/${id}`)
     .then(res => res.json())
-    .catch(() => alert("Error occured, Please fill the form again!"))
+    .catch((err) => alert(err.message))
 }
 
 //TO DELETE SINGLE PERSON
 export function deleteSinglePerson(id) {
     return fetch(`${BASE_URL}/person/${id}`, { method : "DELETE"})
     .then(res => res.json())
-    .catch(() => alert("Error occured, Please fill the form again!"))
+    .catch((err) => alert(err.message))
 }
 
 //TO LOG IN
@@ -69,7 +76,7 @@ export function loginToAccount(data) {
         body: JSON.stringify(data)
     })
         .then(res => res.json())
-        .catch(err => alert("FROM SERVER : " + err.message));
+        .catch(err => alert(err.message));
 }
 
 //TO REGISTER
@@ -83,7 +90,7 @@ export function registerAnAccount(data) {
         body: JSON.stringify(data)
     })
         .then(res => res.json())
-        .catch(err => alert("FROM SERVER : " + err.message));
+        .catch(err => alert(err.message));
 }
 
 //TO CHECK SECRET
@@ -97,7 +104,7 @@ export function secretCheck(data) {
         body: JSON.stringify(data)
     })
         .then(res => res.json())
-        .catch(err => alert("FROM SERVER : " + err.message));
+        .catch(err => alert(err.message));
 }
 
 //TO RESET PASSWORD
@@ -111,5 +118,5 @@ export function passwordReset(data) {
         body: JSON.stringify(data)
     })
         .then(res => res.json())
-        .catch(err => alert("FROM SERVER : " + err.message));
+        .catch(err => alert(err.message));
 }
