@@ -12,7 +12,7 @@
   background: url("../images/green-sky.gif");
   min-height: 100vh;
   background-size: cover;
-  padding: 7rem;
+  padding: 20px;
   color: white;
   display: flex;
   justify-content: center;
@@ -20,11 +20,11 @@
 }
 
 #home-wrapper #container {
-  padding: 3rem;
+  padding: 10px;
   backdrop-filter: blur(20px);
   border: 1px solid transparent;
-  border-radius: 2.5rem;
-  font-size: 4.5rem;
+  border-radius: 5px;
+  font-size: 22px;
   text-align: start;
   animation: homeStartAnimation 0.5s 1 ease-out;
 }
@@ -55,34 +55,34 @@
 #home-wrapper #btn-container {
   width: 100%;
   text-align: end;
-  margin-top: 5rem;
+  margin-top: 30px;
 }
 
 #home-wrapper #btn-container button {
-  font-size: 5rem;
-  padding: 1rem 5rem;
+  font-size: 22px;
+  padding: 10px 20px;
   outline: none;
   border: 1px solid transparent;
   background: #002D62;
   color: white;
-  font-weight: 700;
-  border-radius: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
 }
 
 #form-container {
   background: url("../images/green-sky.gif");
   min-height: 100vh;
   background-size: cover;
-  padding: 8rem;
+  padding: 20px;
   color: white;
   overflow: hidden;
 }
 
 #form-container #form {
-  padding: 3rem;
+  padding: 30px 20px;
   backdrop-filter: blur(10px);
   border: 1px solid transparent;
-  border-radius: 2.5rem;
+  border-radius: 5px;
   animation: formAnimation .2s 1 ease;
 }
 
@@ -98,26 +98,26 @@
 
 #form .field-container,
 #form .textarea-container {
-  border-bottom: 2px solid gainsboro;
+  border-bottom: 1px solid gainsboro;
   width: 100%;
   position: relative;
 }
 
 #form .field-container {
-  height: 13rem;
-  margin-bottom: 3rem;
+  height: 50px;
+  margin-bottom: 20px;
 }
 
 #form .textarea-container {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
-  min-height: 20rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  min-height: 100px;
 }
 
 #form .field-container input,
 #form .textarea-container textarea {
-  padding: 1rem;
-  font-size: 5rem;
+  padding: 10px;
+  font-size: 22px;
   width: 100%;
   height: 100%;
   background: none;
@@ -128,30 +128,30 @@
 }
 
 #form .field-container textarea {
-  padding-top: 3rem;
+  padding-top: 20px;
 }
 
 #form .field-container label,
 #form .textarea-container label {
   position: absolute;
-  left: 1rem;
-  top: 4rem;
-  font-size: 5rem;
+  left: 10px;
+  top: 10px;
+  font-size: 22px;
   transition: 0.6s;
   color: gainsboro;
 }
 
 #form .field-container input:focus~label,
 #form .field-container input:valid~label {
-  top: -2.5rem;
-  font-size: 3.5rem;
+  top: -10px;
+  font-size: 12px;
   color: grey;
 }
 
 #form .textarea-container textarea:focus~label,
 #form .textarea-container textarea:valid~label {
-  top: -5rem;
-  font-size: 3.5rem;
+  top: -10px;
+  font-size: 12px;
   color: grey;
 }
 
@@ -161,17 +161,17 @@
 }
 
 #form .submit-btn button {
-  font-size: 4rem;
-  padding: 1rem 6rem;
+  font-size: 22px;
+  padding: 10px 20px;
   background: #002D62;
-  ;
+  border: none;
   outline: none;
   color: white;
-  border-radius: 1rem;
+  border-radius: 5px;
 }
 
 #form .submit-btn button:focus {
-  border: 3px solid white;
+  border: 2px solid white;
 }
 
 #form-container #rocket {
@@ -185,17 +185,30 @@
   transform: scale(0);
 }
 
+#form-container #rocket {
+  height: 100vh;
+}
+
+#form-container #rocket span{
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+}
+
 #form-container #rocket img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   animation: rocketAnime 1.5s ease-in infinite;
 }
 
 @keyframes rocketAnime {
   0% {
-    transform: translateY(200%);
+    transform: translateY(70vh);
   }
 
   50% {
-    transform: translateY(200%);
+    transform: translateY(70vh);
   }
 
   100% {
@@ -207,7 +220,7 @@
   background: url("../images/green-sky.gif");
   min-height: 100vh;
   background-size: cover;
-  padding: 8rem;
+  padding: 20px;
   color: white;
   display: flex;
   justify-content: center;
@@ -215,10 +228,10 @@
 }
 
 #thanks-wrapper #thanks-container {
-  padding: 3rem;
+  padding: 10px;
   backdrop-filter: blur(20px);
   border: 1px solid transparent;
-  border-radius: 2.5rem;
+  border-radius: 5px;
   animation: thanksAnime 0.5s ease-out 1;
 }
 
@@ -233,9 +246,9 @@
 }
 
 #thanks-container p {
-  font-size: 4.5rem;
+  font-size: 22px;
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 20px;
 }
 
 #thanks-container p em {
@@ -248,8 +261,8 @@
 
 #thanks-wrapper #disclaimer p {
   text-align: center;
-  font-size: 3.5rem;
-  margin-bottom: 2rem;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 #thanks-wrapper #disclaimer sup {
@@ -258,7 +271,7 @@
 
 #thanks-wrapper #disclaimer #disclaimer-img {
   text-align: center;
-  height: 25rem;
+  height: 100px;
 }
 
 #thanks-wrapper #disclaimer-img img {
@@ -272,8 +285,8 @@
 
 #loader-container {
   width: 60%;
-  height: 2rem;
-  background: green;
+  height: 10px;
+  background: var(--theme);
   border: 1px solid gray;
   border-radius: 15px;
   display: flex;
@@ -311,6 +324,9 @@
   background-attachment: fixed;
   overflow: hidden;
   padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .my-wish blockquote {
@@ -366,6 +382,9 @@
   border-bottom: 1px solid gainsboro;
   padding: 0.5rem;
   text-align: start;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .msg section {
@@ -375,10 +394,75 @@
   align-items: center;
 }
 
-.msg div {
+.msg .msg-container {
   display: inline-block;
   min-width: 80%;
   padding: 0 .5rem;
+}
+
+.msg .icon-container {
+  cursor: pointer;
+  position: relative;
+}
+
+.msg .icon-container .copy-note {
+  position: absolute;
+  font-size: 14px;
+  width: 70px;
+  padding: 0px 5px;
+  background: var(--theme);
+  color: white;
+  border-radius: 20px;
+  top: -25px;
+  right: 5px;
+}
+
+.msg .icon-container .delete-confirmation {
+  position: absolute;
+  font-size: 16px;
+  text-align: center;
+  width: 70vw;
+  right: -5px;
+  top: 35px;
+  background: gainsboro;
+  color: var(--theme);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.msg .icon-container .delete-confirmation::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: gainsboro;
+  transform: rotate(45deg);
+  right: 10px;
+  top: -8px;
+}
+
+.msg .icon-container .delete-confirmation .delete-btn-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.msg .icon-container .delete-confirmation button {
+  outline: none;
+  border: none;
+  background-color: white;
+  padding: 0 10px;
+  font-size: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.msg .icon-container .delete-confirmation button:first-child {
+  color: green;
+}
+
+.msg .icon-container .delete-confirmation button:last-child {
+  color: red;
 }
 
 .msg .to {
@@ -394,6 +478,13 @@
   width: 100%;
   padding: 0.5rem;
   text-align: end;
+}
+
+.waiting-loader-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 .loader {

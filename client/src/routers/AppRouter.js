@@ -10,6 +10,7 @@ import LoginForm from "../components/LoginForm";
 import PasswordResetForm from "../components/PasswordResetForm";
 import UserLandingPage from "../components/UserLandingPage";
 import EventCard from "../components/EventCard";
+import WishCard from "../components/WishCard";
 
 export default function AppRouter() {
 
@@ -22,6 +23,7 @@ export default function AppRouter() {
                 <Route path="/password-reset" element={<PasswordResetForm />} />
                 <Route path="/events" element={<UserLandingPage />} >
                     <Route path=":name" element={<EventCard />} />
+                    <Route path=":name/check/:id" element={<WishCard />} />
                 </Route>
 
                 <Route path="/events/:name/:id" element={<Home />} />

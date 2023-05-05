@@ -11,6 +11,29 @@
     margin-bottom: 10px;
 }
 
+.event-card-container .link-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-card-container .link-popup p {
+    padding: 20px;
+    width: 90%;
+    border-radius: 5px;
+    background: white;
+    text-align: center;
+}
+
+.event-card-container .link-popup p .wish-link {
+ display: block;
+ margin-top: 10px;
+ color: var(--theme);
+}
+
 .event-card-container .event-card-right {
     display: flex;
     justify-content: center;
