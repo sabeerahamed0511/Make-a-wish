@@ -1,0 +1,94 @@
+.event-card-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid gainsboro;
+    min-height: 80px;
+    padding: 10px;
+    padding-right: 15px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.event-card-container .event-card-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-card-container .event-card-right .icon-container {
+    padding-left: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.event-card-container .event-card-right .icon-container .copy-note {
+    position: absolute;
+    font-size: 14px;
+    width: 70px;
+    padding: 0px 5px;
+    background: var(--theme);
+    color: white;
+    border-radius: 20px;
+    top: -25px;
+    right: 5px;
+}
+
+.event-card-container .event-card-right .icon-container .delete-confirmation {
+    position: absolute;
+    font-size: 16px;
+    text-align: center;
+    width: 70vw;
+    right: -5px;
+    top: 35px;
+    background: gainsboro;
+    color: var(--theme);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.event-card-container .event-card-right .icon-container .delete-confirmation::before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: gainsboro;
+    transform: rotate(45deg);
+    right: 10px;
+    top: -8px;
+}
+
+.event-card-container .event-card-right .icon-container .delete-confirmation .delete-btn-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.event-card-container .event-card-right .icon-container .delete-confirmation button {
+    outline: none;
+    border: none;
+    background-color: white;
+    padding: 0 10px;
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.event-card-container .event-card-right .icon-container .delete-confirmation button:first-child {
+    color: green;
+}
+
+.event-card-container .event-card-right .icon-container .delete-confirmation button:last-child {
+    color: red;
+}
+
+.event-card-container .event-card-left .event-name {
+    font-size: 22px;
+    color: var(--theme);
+}
+
+.event-card-container .event-card-left a {
+    color: #04425A;
+}
