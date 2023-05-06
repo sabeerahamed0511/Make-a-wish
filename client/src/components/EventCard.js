@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Wish } from "../contexts/WishContext";
 import { BASE_URL, deleteSinglePerson, getAllPerson } from "../utils/api-utils";
 import { getCurrentUser, getToken } from "../utils/storage-utills";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function EventCard() {
 
@@ -70,7 +70,7 @@ export default function EventCard() {
                                         </div>
                                         <div className="icon-container" onClick={async () => {
                                             try {
-                                                await navigator.clipboard.writeText(`http://localhost:3000/wishes/${each._id}`);
+                                                await navigator.clipboard.writeText(`https://make-a-wish-psi.vercel.app/wishes/${each._id}`);
                                                 setShowCopyText(true);
                                                 setTimeout(() => setShowCopyText(false), 2000);
                                             } catch (err) {
