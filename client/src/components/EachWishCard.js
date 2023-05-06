@@ -11,6 +11,7 @@ export default function EachWishCard({ greeting, onGreetingDelete }) {
             .then(res => {
                 if (res.status === "Success") {
                     onGreetingDelete(id);
+                    setShowDelete(false);
                 } else {
                     alert(res.message);
                 }

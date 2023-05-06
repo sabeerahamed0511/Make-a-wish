@@ -1,0 +1,41 @@
+.instruction-container {
+    color: var(--theme);
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.ins-title {
+    /* width: 100%; */
+    margin-bottom: 20px;
+    color: var(--theme);
+    /* text-align: start; */
+    text-decoration: underline;
+}
+
+.ins-icon-container {
+    min-width: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ins-icon-container ion-icon {
+    font-size: 22px;
+}
+
+.ins-icon-text {
+    font-size: 18px;
+}
+
+.ins-note {
+    border-left: 1px solid gainsboro;
+    padding: 10px 20px;
+    flex-grow: 1;
+    font-size: 18px;
+}

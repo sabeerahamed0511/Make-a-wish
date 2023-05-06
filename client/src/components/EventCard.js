@@ -35,6 +35,7 @@ export default function EventCard() {
             .then(res => {
                 if (res.status === "Success") {
                     onDeleteEvent(id);
+                    setShowDelete(false);
                 } else {
                     alert(res.message);
                 }
@@ -95,7 +96,7 @@ export default function EventCard() {
                                             {
                                                 showDelete &&
                                                 <div className="delete-confirmation" >
-                                                    Are u sure?<br />Deleteing may leads to clear all the wishes gathered for this person!
+                                                    Are u sure?<br />Deleteing may leads to clear all the greetings gathered for this person!
                                                     <div className="delete-btn-container" >
                                                         <button onClick={() => {
                                                             handleDelete(each._id);

@@ -24,6 +24,11 @@ export default function UserLandingPage() {
                         showMenu &&
                         <ul className="nav-items">
                             <li onClick={() => {
+                                navigate(`instruction`);
+                            }}>
+                                <ion-icon name="information-circle"></ion-icon>
+                            </li>
+                            <li onClick={() => {
                                 setShowCreateForm(true);
                             }}>
                                 <ion-icon name="add-circle"></ion-icon>
