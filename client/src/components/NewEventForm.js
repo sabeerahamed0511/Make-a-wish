@@ -29,6 +29,7 @@ export default function NewEventForm({setShowCreateForm}) {
                 onAddEvents(res.person);
                 setPerson(pre => ({...pre, name : "", notes : ""}));
                 setShowCreateForm(false)
+                navigate(`${getCurrentUser().name}`);
             } else {
                 alert(res.message)
             }
