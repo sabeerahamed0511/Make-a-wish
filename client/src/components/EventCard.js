@@ -14,6 +14,9 @@ export default function EventCard() {
     const [showCopyText, setShowCopyText] = useState(false);
     const [showLinkPopup, setShowLinkPopup] = useState(false);
 
+    let path = window.location.href;
+    let domain = path.split("events")[0];
+
     useEffect(() => {
 
         if (!getToken()) return navigate("../login");
@@ -70,7 +73,7 @@ export default function EventCard() {
                                         </div>
                                         <div className="icon-container" onClick={async () => {
                                             try {
-                                                await navigator.clipboard.writeText(`https://make-a-wish-psi.vercel.app/wishes/${each._id}`);
+                                                await navigator.clipboard.writeText(`${domain}wishes/${each._id}`);
                                                 setShowCopyText(true);
                                                 setTimeout(() => setShowCopyText(false), 2000);
                                             } catch (err) {
@@ -85,7 +88,7 @@ export default function EventCard() {
                                             showLinkPopup &&
                                             <div className="link-popup" onClick={() => setShowLinkPopup(false)}>
                                                 <p>Browser not support, copy from here.
-                                            <a className="wish-link" href={`http://localhost:3000/wishes/${each._id}`} target="_blank">LINK</a></p>
+                                            <a className="wish-link" href={`${domain}wishes/${each._id}`} target="_blank">LINK</a></p>
                                             </div>
                                         }
 
