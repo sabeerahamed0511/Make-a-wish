@@ -9,6 +9,7 @@ export default function Wishes() {
     const [currPerson, setCurrPerson] = useState(null);
     const [list, setList] = useState([]);
     const [boo, setBoo] = useState(true);
+    const [error, setError] = useState(false);
 
     useEffect(() => {
 
@@ -28,7 +29,8 @@ export default function Wishes() {
                         .catch(err => alert(err.message))
 
                 } else {
-                    alert(res.message);
+                    setCurrPerson(true);
+                    setError(true);
                 }
             })
             .catch(err => alert(err.message))
@@ -37,36 +39,41 @@ export default function Wishes() {
 
     return <>
         {
-            !currPerson ? 
-            <div className="waiting-loader-container"><div className="loader"></div></div> :
-            (boo ?
-                <div className="my-wish">
-                    <blockquote>
-                        Hey {currPerson.name},
-                        <p>
-                            {`${currPerson.notes} `} 
-                             And I've received notes from your closest friends and family. I hope you like it!
-                        </p>
-                        <div>
-                            <button onClick={() => setBoo(false)}>Show!</button>
-                        </div>
-                    </blockquote>
-                </div> :
-                <div className="notes">
-                    {/* <audio src={require("../images/Yen-Endral-Un-Piranthanal(PagalWorldl).mp3")} autoPlay onLoad={(e) => e.target.load()} /> */}
-                    {list.map(({ _id, realName, nickNameOfWisher, nickNameOfReciever, message }) => {
-                        return <div className="msg" key={_id}>
-                            <p className="from">from {nickNameOfWisher} ;</p>
-                            <section>
-                                <div className="msg-container">
-                                    <p className="to">hey {nickNameOfReciever},</p>
-                                    <em>"{message}"</em>
-                                    <p className="by">- {realName}</p>
+            !currPerson ?
+                <div className="waiting-loader-container"><div className="loader"></div></div> :
+                error ?
+                    <p className="error-text-container">
+                        Please check the URL!<br />Or<br />Link may be expired!<br />&#9785;
+                    </p>
+                    :
+                    (boo ?
+                        <div className="my-wish">
+                            <blockquote>
+                                Hey {currPerson.name},
+                                <p>
+                                    {`${currPerson.notes} `}
+                                    And I've received notes from your closest friends and family. I hope you like it!
+                                </p>
+                                <div>
+                                    <button onClick={() => setBoo(false)}>Show!</button>
                                 </div>
-                            </section>
-                        </div>
-                    })}
-                </div>)
+                            </blockquote>
+                        </div> :
+                        <div className="notes">
+                            {/* <audio src={require("../images/Yen-Endral-Un-Piranthanal(PagalWorldl).mp3")} autoPlay onLoad={(e) => e.target.load()} /> */}
+                            {list.map(({ _id, realName, nickNameOfWisher, nickNameOfReciever, message }) => {
+                                return <div className="msg" key={_id}>
+                                    <p className="from">from {nickNameOfWisher} ;</p>
+                                    <section>
+                                        <div className="msg-container">
+                                            <p className="to">hey {nickNameOfReciever},</p>
+                                            <em>"{message}"</em>
+                                            <p className="by">- {realName}</p>
+                                        </div>
+                                    </section>
+                                </div>
+                            })}
+                        </div>)
         }
     </>
 }

@@ -33,11 +33,12 @@
     right: 8px;
     top: 25px;
     list-style: none;
-    background-color: gainsboro;
+    background-color: var(--theme);
     z-index: 10;
-    padding: 10px 10px 0 10px;
     font-size: 22px;
     vertical-align: middle;
+    padding: 10px 10px 0 10px;
+    border-radius: 4px;
 }
 
 .user-page-container .user-header .user-navbar .nav-items::before {
@@ -45,7 +46,7 @@
     content: "";
     width: 10px;
     height: 10px;
-    background: gainsboro;
+    background: var(--theme);
     transform: rotate(45deg);
     top: -5px;
     right: 5px;
@@ -54,6 +55,8 @@
 .user-page-container .user-header .user-navbar .nav-items li {
     padding-bottom: 10px;
     cursor: pointer;
+    border: 2px solid var(--theme);
+    color: white;
 }
 
 .user-page-container .outlet-container {

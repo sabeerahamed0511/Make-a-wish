@@ -44,6 +44,13 @@
   }
 }
 
+.error-text-container {
+  color: var(--theme);
+  font-size: 18px;
+  text-align: center;
+  margin-top: 50px;
+}
+
 #home-wrapper #container p span {
   color: red;
 }

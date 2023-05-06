@@ -14,7 +14,7 @@ export default function WishContext({children}) {
         addName : (e) => setName(e),
         events,
         onAddEvents : (data) => {
-            setEvents(pre => ([data, ...pre]));
+            setEvents(pre => ([...pre, data]));
         },
         onInitialAddEvents : (data) => {
             setEvents(data);
