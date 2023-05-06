@@ -359,7 +359,7 @@
 
 .notes {
   backdrop-filter: blur(10px);
-  border-radius: 5px;
+  border-radius: 4px;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -368,12 +368,12 @@
 
 .msg {
   width: 100%;
-  background: linear-gradient(transparent, transparent, #eec0c8);
+  background: linear-gradient(transparent, transparent, silver);
   border: 1px solid gainsboro;
   box-shadow: 0 0 5px 2px gainsboro;
   font-size: 1.2rem;
-  color: #800020;
-  border-radius: .5rem;
+  color: var(--theme);
+  border-radius: 4px;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -389,7 +389,7 @@
 
 .msg section {
   display: flex;
-  min-height: 200px;
+  min-height: 150px;
   justify-content: center;
   align-items: center;
 }
@@ -424,8 +424,8 @@
   width: 70vw;
   right: -5px;
   top: 35px;
-  background: gainsboro;
-  color: var(--theme);
+  background: var(--theme);;
+  color: white;
   padding: 10px;
   border-radius: 4px;
 }
@@ -435,10 +435,10 @@
   content: "";
   width: 15px;
   height: 15px;
-  background: gainsboro;
+  background: var(--theme);;
   transform: rotate(45deg);
   right: 10px;
-  top: -8px;
+  top: -7px;
 }
 
 .msg .icon-container .delete-confirmation .delete-btn-container {

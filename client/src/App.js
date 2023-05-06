@@ -6,6 +6,7 @@ import "./styles/landingPage.css";
 import "./styles/userLandingPage.css";
 import "./styles/newEventForm.css";
 import "./styles/eventCard.css";
+import "./styles/instruction.css";
 
 function App() {
   return (

@@ -45,6 +45,7 @@
     font-size: 20px;
     cursor: pointer;
     position: relative;
+    color: var(--theme);
 }
 
 .event-card-container .event-card-right .icon-container .copy-note {
@@ -66,8 +67,8 @@
     width: 70vw;
     right: -5px;
     top: 35px;
-    background: gainsboro;
-    color: var(--theme);
+    background: var(--theme);
+    color: white;
     padding: 10px;
     border-radius: 4px;
 }
@@ -77,10 +78,10 @@
     content: "";
     width: 15px;
     height: 15px;
-    background: gainsboro;
+    background: var(--theme);;
     transform: rotate(45deg);
     right: 10px;
-    top: -8px;
+    top: -7px;
 }
 
 .event-card-container .event-card-right .icon-container .delete-confirmation .delete-btn-container {
