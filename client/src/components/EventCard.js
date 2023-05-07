@@ -2,12 +2,13 @@ import React, { useContext, useEffect, useState } from "react";
 import { Wish } from "../contexts/WishContext";
 import { getAllPerson } from "../utils/api-utils";
 import { getCurrentUser, getToken } from "../utils/storage-utills";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
 import EachEventCard from "./EachEventCard";
 
 export default function EventCard() {
 
     const { events, onInitialAddEvents } = useContext(Wish);
+    const { setShowCreateForm, setShowMenu } = useOutletContext();
     const navigate = useNavigate();
 
     const [loader, setLoader] = useState(true);
@@ -34,7 +35,18 @@ export default function EventCard() {
             :
             (
                 events.length === 0 ?
-                    <h3 style={{ color: "grey" }}>No events to display!&#9785;<br />Please add some events&#9996;</h3>
+                    <>
+                        <div className="new-form-link">
+                            <h3 className="event-card-display-text" >
+                                No events to display!&#9785;<br />Please add some events&#9996;
+                            </h3>
+                            <span onClick={() => {
+                                setShowCreateForm(true);
+                                setShowMenu(false);
+                            }}><ion-icon name="add-circle"></ion-icon>
+                            </span>
+                        </div>
+                    </>
                     :
                     <>
                         {

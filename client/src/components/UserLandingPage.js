@@ -30,6 +30,7 @@ export default function UserLandingPage() {
                             </li>
                             <li onClick={() => {
                                 setShowCreateForm(true);
+                                setShowMenu(false);
                             }}>
                                 <ion-icon name="add-circle"></ion-icon>
                             </li>
@@ -48,10 +49,46 @@ export default function UserLandingPage() {
                         </ul>
                     }
                 </nav>
-
+                <ul className="nav-items-tab">
+                    <li className="logo-li">
+                        <div className="logo-li-container">
+                            <img src={require("../images/logo.png")} />
+                        </div>
+                        <p className="icon-name">Make-A-Wish</p>
+                    </li>
+                    <li className="icon-li" onClick={() => {
+                        navigate(`instruction`);
+                    }}>
+                        <ion-icon name="information-circle"></ion-icon>
+                        <p className="icon-name">Instruction</p>
+                    </li>
+                    <li className="icon-li" onClick={() => {
+                        setShowCreateForm(true);
+                    }}>
+                        <ion-icon name="add-circle"></ion-icon>
+                        <p className="icon-name">New Event</p>
+                    </li>
+                    <li className="icon-li" onClick={() => {
+                        navigate(`${getCurrentUser().name}`);
+                    }}>
+                        <ion-icon name="home"></ion-icon>
+                        <p className="icon-name">Home</p>
+                    </li>
+                </ul>
+                <div className="logout-li" onClick={() => {
+                    deleteToken();
+                    deleteCurrentUser();
+                    navigate("../login");
+                }}>
+                    <ion-icon name="log-out-outline"></ion-icon>
+                    <p className="icon-name">Log out</p>
+                </div>
             </header>
             <div className="outlet-container">
-                <Outlet />
+                <Outlet context={{
+                    setShowCreateForm,
+                    setShowMenu
+                }} />
             </div>
         </div>
         {showCreateForm && <NewEventForm setShowCreateForm={setShowCreateForm} />}

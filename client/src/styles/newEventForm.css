@@ -112,3 +112,15 @@
     from {transform: rotate(0);}
     to {transform: rotate(360deg);}
 }
+
+@media screen and (min-width : 481px) and (max-width : 768px) {
+    .new-event-form .form {
+        width: 400px;
+    }
+}
+
+@media screen and (min-width : 769px) {
+    .new-event-form .form {
+        width: 500px;
+    }
+}
