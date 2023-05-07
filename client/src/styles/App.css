@@ -83,6 +83,9 @@
   padding: 20px;
   color: white;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #form-container #form {
@@ -91,6 +94,7 @@
   border: 1px solid transparent;
   border-radius: 5px;
   animation: formAnimation .2s 1 ease;
+  flex-grow: 1;
 }
 
 @keyframes formAnimation {
@@ -116,7 +120,7 @@
 }
 
 #form .textarea-container {
-  margin-top: 20px;
+  margin-top: 25px;
   margin-bottom: 20px;
   min-height: 100px;
 }
@@ -135,7 +139,7 @@
 }
 
 #form .field-container textarea {
-  padding-top: 20px;
+  /* padding-top: 20px; */
 }
 
 #form .field-container label,
@@ -157,7 +161,7 @@
 
 #form .textarea-container textarea:focus~label,
 #form .textarea-container textarea:valid~label {
-  top: -10px;
+  top: -15px;
   font-size: 12px;
   color: grey;
 }
@@ -196,7 +200,7 @@
   height: 100vh;
 }
 
-#form-container #rocket span{
+#form-container #rocket span {
   display: inline-block;
   height: 100px;
   width: 100px;
@@ -431,7 +435,8 @@
   width: 70vw;
   right: -5px;
   top: 35px;
-  background: var(--theme);;
+  background: var(--theme);
+  ;
   color: white;
   padding: 10px;
   border-radius: 4px;
@@ -442,7 +447,8 @@
   content: "";
   width: 15px;
   height: 15px;
-  background: var(--theme);;
+  background: var(--theme);
+  ;
   transform: rotate(45deg);
   right: 10px;
   top: -7px;
@@ -506,5 +512,29 @@
 @keyframes initialLoader {
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* FOR TABLET-------------------------------------------------- */
+
+@media screen and (min-width : 481px) and (max-width : 768px) {
+  .msg {
+    width: 400px;
+  }
+
+  .msg .icon-container .delete-confirmation {
+    width: 250px;
+  }
+}
+
+/* FOR LAPTOP------------------------------------------ */
+
+@media screen and (min-width : 769px) {
+  .msg {
+    width: 400px;
+  }
+
+  .msg .icon-container .delete-confirmation {
+    width: 250px;
   }
 }
