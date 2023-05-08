@@ -60,7 +60,8 @@ export default function Wishes() {
                                     </div>
                                 </blockquote>
                             </div>
-                        </div> :
+                        </div>
+                        :
                         <div className="notes">
                             {/* <audio src={require("../images/Yen-Endral-Un-Piranthanal(PagalWorldl).mp3")} autoPlay onLoad={(e) => e.target.load()} /> */}
                             {list.map(({ _id, realName, nickNameOfWisher, nickNameOfReciever, message }) => {
