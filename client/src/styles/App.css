@@ -326,9 +326,8 @@
 
 .my-wish {
   min-height: 100vh;
-  background: url("../images/green-sky.gif") no-repeat;
+  background: url("../images/green-sky.gif");
   background-size: cover;
-  background-attachment: fixed;
   overflow: hidden;
   padding: 1rem;
   display: flex;
