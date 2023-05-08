@@ -118,3 +118,23 @@ align-items: center;
     from {transform: rotate(0);}
     to {transform: rotate(360deg);}
 }
+
+/* FOR TABLET-------------------------------------------------- */
+
+@media screen and (min-width : 481px) and (max-width : 768px) {    
+    .signin-form-container form {
+        width: 400px;
+        box-shadow: 0 0 5px gainsboro;
+        border-radius: 10px;
+    }
+}
+
+/* FOR LAPTOP------------------------------------------ */
+
+@media screen and (min-width : 769px) {
+    .signin-form-container form {
+        width: 400px;
+        box-shadow: 0 0 5px gainsboro;
+        border-radius: 10px;
+    }
+}

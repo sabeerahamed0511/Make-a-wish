@@ -47,17 +47,19 @@ export default function Wishes() {
                     </p>
                     :
                     (boo ?
-                        <div className="my-wish">
-                            <blockquote>
-                                Hey {currPerson.name},
-                                <p>
-                                    {`${currPerson.notes} `}
-                                    And I've received notes from your closest friends and family. I hope you like it!
-                                </p>
-                                <div>
-                                    <button onClick={() => setBoo(false)}>Show!</button>
-                                </div>
-                            </blockquote>
+                        <div className="lap-container">
+                            <div className="my-wish">
+                                <blockquote>
+                                    Hey {currPerson.name},
+                                    <p>
+                                        {`${currPerson.notes} `}
+                                        And I've received notes from your closest friends and family. I hope you like it!
+                                    </p>
+                                    <div>
+                                        <button onClick={() => setBoo(false)}>Show!</button>
+                                    </div>
+                                </blockquote>
+                            </div>
                         </div> :
                         <div className="notes">
                             {/* <audio src={require("../images/Yen-Endral-Un-Piranthanal(PagalWorldl).mp3")} autoPlay onLoad={(e) => e.target.load()} /> */}

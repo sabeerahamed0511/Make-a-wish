@@ -54,7 +54,7 @@ export default function UserLandingPage() {
                         <div className="logo-li-container">
                             <img src={require("../images/logo.png")} />
                         </div>
-                        <p className="icon-name">Make-A-Wish</p>
+                        <p className="icon-name">MAKE-A-WISH</p>
                     </li>
                     <li className="icon-li" onClick={() => {
                         navigate(`instruction`);
