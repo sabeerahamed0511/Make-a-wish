@@ -138,10 +138,6 @@
   transition: 0.2s;
 }
 
-#form .field-container textarea {
-  /* padding-top: 20px; */
-}
-
 #form .field-container label,
 #form .textarea-container label {
   position: absolute;
@@ -518,6 +514,23 @@
 /* FOR TABLET-------------------------------------------------- */
 
 @media screen and (min-width : 481px) and (max-width : 768px) {
+  #home-wrapper #container {
+    width: 400px;
+  }
+
+  #form-container #form {
+    width: 400px;
+    flex-grow: 0;
+  }
+
+  #thanks-wrapper #thanks-container {
+    width: 400px;
+  }
+
+  .my-wish blockquote {
+    width: 400px;
+  }
+
   .msg {
     width: 400px;
   }
@@ -530,6 +543,42 @@
 /* FOR LAPTOP------------------------------------------ */
 
 @media screen and (min-width : 769px) {
+
+  .lap-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #home-wrapper {
+    width: 500px;
+    min-height: 90vh;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  #form-container {
+    width: 500px;
+    min-height: 90vh;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  #thanks-wrapper {
+    width: 500px;
+    min-height: 90vh;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .my-wish {
+    width: 500px;
+    min-height: 90vh;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
   .msg {
     width: 400px;
   }
